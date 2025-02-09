@@ -12,6 +12,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      backgroundImage: {
+        "tarantula-gradient": "radial-gradient(circle, #230330 0%, black 100%)",
+      },
     },
   },
   plugins: [],
