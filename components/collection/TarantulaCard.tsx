@@ -32,7 +32,7 @@ const TarantulaCard = ({ tarantula }: TarantulaProps) => {
           }`}
       >
         {/* Front of card */}
-        <div className="absolute w-full h-5/6 [backface-visibility:hidden] bg-gradient-to-br from-purple-900 via-black to-purple-800 rounded-xl p-6 shadow-xl border border-purple-500/20">
+        <div className="absolute w-full h-4/6 sm:h-5/6 [backface-visibility:hidden] bg-gradient-to-br from-purple-900 via-black to-purple-800 rounded-xl p-6 shadow-xl border border-purple-500/20">
           <div className="relative w-full h-4/5 mb-4">
             <Image
               src={tarantula.image}

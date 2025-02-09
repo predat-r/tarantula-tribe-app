@@ -98,17 +98,21 @@ const Navbar = () => {
             )}
           </button>
 
-          <div className="flex items-center gap-8 sm:gap-12">
-            {["collection", "about"].map((link) => (
+          <div className="absolute left-36 sm:left-1/2 transform -translate-x-1/2 flex items-center gap-4 sm:gap-12">
+            {["collection", "about", "chat"].map((link) => (
               <Link
                 key={link}
-                href={pathname === "/" ? `#${link}` : `/#${link}`} // Handle routing
+                href={pathname === "/" ? `#${link}` : `/#${link}`}
                 className={`relative text-md sm:text-2xl capitalize cursor-pointer
-                  ${
-                    activeLink === link
-                      ? "text-white font-medium"
-                      : "text-gray-400 hover:text-white transition-colors duration-200"
-                  }`}
+        ${
+          activeLink === link
+            ? "text-white font-medium"
+            : "text-gray-400 hover:text-white transition-colors duration-200"
+        }       ${
+                  link === "chat"
+                    ? "text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400 drop-shadow-[0_0_10px_rgba(128,0,128,0.7)]"
+                    : ""
+                }`}
                 onClick={(e) => handleScroll(e, link)}
               >
                 {link}

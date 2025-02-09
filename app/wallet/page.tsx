@@ -10,12 +10,12 @@ const CollectionPage = () => {
   ];
 
   return (
-    <div className="min-h-screen text-white  mt-28 pl-14 pr-14 flex flex-col justify-center items-center">
+    <div className="min-h-screen text-white  mt-28 sm:pl-14 sm:pr-14 pr-8 pl-8 flex flex-col justify-center items-center">
       <h1 className="text-4xl bg-gradient-to-r from-[#230330] to-white bg-clip-text text-transparent  sm:text-6xl mb-8">
         Your Tarantula Wallet
       </h1>
 
-      <div className="w-full h-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8">
+      <div className="w-full h-full grid grid-cols-1 md:grid-cols-2 gap-y-0 lg:grid-cols-3 gap-x-8">
         {mockTarantulas.map((tarantula) => (
           <TarantulaCard key={tarantula.id} tarantula={tarantula} />
         ))}
