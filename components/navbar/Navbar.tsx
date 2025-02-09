@@ -52,25 +52,28 @@ const Navbar = () => {
   };
 
   const handleScroll = (
-    event: React.MouseEvent<HTMLAnchorElement>,
-    id: string
-  ) => {
-    event.preventDefault();
-    setActiveLink(id);
-
-    if (pathname === "/") {
-      const target = document.getElementById(id);
-      if (target) {
-        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      event: React.MouseEvent<HTMLAnchorElement>,
+      id: string
+    ) => {
+      event.preventDefault();
+      setActiveLink(id);
+      if (id === "chat") {
+        router.push("/chat");
+        return;
       }
-    } else {
-      router.push(`/#${id}`);
-    }
-  };
+      if (pathname === "/") {
+        const target = document.getElementById(id);
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      } else {
+        router.push(`/#${id}`);
+      }
+    };
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      const hash = window.location.hash.substring(1); // Remove `#`
+      const hash = window.location.hash.substring(1);
       if (hash) {
         const target = document.getElementById(hash);
         if (target) {
@@ -102,7 +105,7 @@ const Navbar = () => {
             {["collection", "about", "chat"].map((link) => (
               <Link
                 key={link}
-                href={pathname === "/" ? `#${link}` : `/#${link}`}
+                href={link === "chat" ? "/chat" : pathname === "/" ? `#${link}` : `/#${link}`}
                 className={`relative text-md sm:text-2xl capitalize cursor-pointer
         ${
           activeLink === link
