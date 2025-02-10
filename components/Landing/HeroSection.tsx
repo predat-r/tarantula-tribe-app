@@ -27,7 +27,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
           >
-            AI-powered NFTs with unique personalities. No duplicates, just real
+            <span className="text-pink-900">AI-powered</span> NFTs with unique personalities. No duplicates, just real
             interactions. Own it. Converse with it. Redefine NFTs.
           </motion.h1>
           <motion.div 

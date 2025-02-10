@@ -2,7 +2,10 @@ import React from "react";
 
 const About = () => {
   return (
-    <div id="about" className="w-screen h-screen flex flex-col items-center justify-evenly pl-2 pr-2 sm:pl-10 sm:pr-10">
+    <div
+      id="about"
+      className="w-screen h-screen flex flex-col items-center justify-evenly pl-2 pr-2 sm:pl-10 sm:pr-10"
+    >
       <h1 className="text-center text-6xl sm:text-9xl bg-gradient-to-r from-[#230330] to-white bg-clip-text text-transparent">
         Inside The Tarantula Tribe
       </h1>
