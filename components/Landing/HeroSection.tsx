@@ -8,7 +8,7 @@ const HeroSection = () => {
     <div>
       <div className="flex flex-col sm:flex-row w-screen h-screen justify-between sm:justify-between overflow-auto items-center pt-5 sm:pt-0 sm:pl-14 sm:pr-10 overflow-x-hidden">
         <motion.div 
-          className="flex flex-col w-full sm:w-1/2 h-1/2 items-center sm:items-start justify-between sm:pl-3 sm:pr-3"
+          className="flex flex-col w-full sm:w-1/2 h-1/2 items-center sm:items-start justify-between sm:gap-y-5 sm:pl-3 sm:pr-3"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -36,7 +36,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
           >
-            <div className="flex flex-row justify-evenly sm:justify-between items-center w-full sm:w-2/3">
+            <div className="flex flex-row w-full justify-evenly sm:justify-between items-center sm:w-full">
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

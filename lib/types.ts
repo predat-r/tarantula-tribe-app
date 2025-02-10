@@ -5,6 +5,8 @@ export interface Message {
 
 export interface ChatRequest {
   model: string;
+  traits:string[],
+  backstory:string,
   messages: Message[];
   max_tokens: number;
 }

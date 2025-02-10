@@ -57,6 +57,8 @@ const NFTChatInterface = () => {
     try {
       const requestData = {
         model: "gpt-3.5-turbo",
+        traits,
+        backstory,
         messages: newMessages,
         max_tokens: 100,
       } as ChatRequest;
@@ -83,7 +85,7 @@ const NFTChatInterface = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 text-gray-100">
+    <div className="min-h-screen bg-gray-900 font-sans text-gray-100">
       {/* Header */}
       <div className="bg-gray-800/50 backdrop-blur-sm border-b border-gray-700">
         <div className="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
